@@ -24,13 +24,13 @@ jobs:
       run: npm install
 
     - name: Build Angular project
-      run: npm run build -- --prod
+      run: npm run build --prod
 
     - name: Archive production artifact
       uses: actions/upload-artifact@v2
       with:
         name: dist
-        path: ./dist/your-angular-app-name # Replace with the path to your Angular app's build output
+        path: ./dist/achievement-jar # Replace with the path to your Angular app's build output
 
   deploy:
     needs: build
