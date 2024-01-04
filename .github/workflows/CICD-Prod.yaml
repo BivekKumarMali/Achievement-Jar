@@ -51,7 +51,7 @@ jobs:
 
     - name: Deploy to AWS S3
       run: |
-        cd /home/runner/work/Achievement-Jar/Achievement-Jar
+        cd ..
         ls
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
