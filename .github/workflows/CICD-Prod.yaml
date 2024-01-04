@@ -52,7 +52,7 @@ jobs:
     - name: Deploy to AWS S3
       run: |
         ls
-        aws s3 sync ./dist/achievement-jar s3://${{ needs.build.outputs.bucket }} --no-progress --delete
+        aws s3 sync /home/runner/work/Achievement-Jar/Achievement-Jar s3://${{ needs.build.outputs.bucket }} --no-progress --delete
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
